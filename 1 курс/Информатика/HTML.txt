@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE> My home page
+</TITLE>
+</HEAD>
+<BODY TEXT="000000"
+BGCOLOR="#CCCCCC"
+LINK="#0000FF"
+VLINK="#FF00000"
+ALINK="#000088">
+<CENTER><H1> Welcome on my home page!
+</H1></CENTER>
+<CENTER><H2> I hope, you gonna be happy
+</H2></CENTER>
+My name is 
+<B><I> Kirill.
+</B></I> I love to
+<B> watching films and listening music
+</B> i hate
+<B> to wake up early.
+</B>
+<P><CENTER> My photo for everyone, who don't now how i look
+</P></CENTER> 
+<P><CENTER> 
+<IMG SRC="C:\me.png">
+</P></CENTER>
+<HR>
+<CENTER> You can find some information about me in
+<A HREF=https://www.google.com> internet
+</A>
+</CENTER></P>
+<CENTER> And you also can write a message on my
+<A HREF=mailto:kirill.a.balan@gmail.com> gmail
+</A>
+</CENTER>
+</BODY>
+</HTML>
+
