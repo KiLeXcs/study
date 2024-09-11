@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio настольная" version="1.1.8763.0"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>5e21cee0-6cca-494f-abfe-1c393950ac3f</id>
+      <revision>10</revision>
+    </identity>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio настольная" version="1.1.8763.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.8763.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="SpecialFunctions" version="1.12.8763.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.2.8747.29954" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="0" top="0" width="70" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">f3</e>
+          <e type="operand">541</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="90" top="0" width="70" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">f4</e>
+          <e type="operand">536</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="180" top="0" width="78" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">A3</e>
+          <e type="operand">0.38</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="270" top="0" width="78" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">A4</e>
+          <e type="operand">0.15</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="36" width="132" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">T3</e>
+          <e type="operand">1</e>
+          <e type="operand">f3</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.0018</e>
+        </result>
+      </math>
+    </region>
+    <region left="162" top="36" width="132" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">T4</e>
+          <e type="operand">1</e>
+          <e type="operand">f4</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.0019</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="90" width="137" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Fb2</e>
+          <e type="operand">f3</e>
+          <e type="operand">f4</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="1">abs</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">5</e>
+        </result>
+      </math>
+    </region>
+    <region left="162" top="90" width="124" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Tb2</e>
+          <e type="operand">1</e>
+          <e type="operand">Fb2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.2</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="144" width="178" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Ab2max</e>
+          <e type="operand">A3</e>
+          <e type="operand">A4</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.53</e>
+        </result>
+      </math>
+    </region>
+    <region left="198" top="144" width="185" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Ab2min</e>
+          <e type="operand">A3</e>
+          <e type="operand">A4</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="1">abs</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.23</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="180" width="70" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">M</e>
+          <e type="operand">1000</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="90" top="180" width="54" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t2</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="198" top="180" width="177" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δt2</e>
+          <e type="operand">0.001</e>
+          <e type="operand">t2</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.001</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="216" width="130" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand">0</e>
+          <e type="operand">t2</e>
+          <e type="operand">Δt2</e>
+          <e type="function" args="3">range</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="252" width="254" height="53" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">length</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operand">i</e>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">x3</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">A3</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f3</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="function" args="4">for</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="306" width="254" height="53" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">length</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operand">i</e>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">x4</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">A4</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f4</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="function" args="4">for</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="360" width="777" height="85" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">length</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operand">i</e>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">xb2</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">A3</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">A4</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">2</e>
+          <e type="operand">A3</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">A4</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Fb2</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f3</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">A4</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Fb2</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">A3</e>
+          <e type="operand">A4</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Fb2</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="function" args="4">for</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="450" width="254" height="81" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">length</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operand">i</e>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">X3</e>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">el</e>
+          <e type="operand">t</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">X3</e>
+          <e type="operand">i</e>
+          <e type="operand">2</e>
+          <e type="function" args="3">el</e>
+          <e type="operand">x3</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="function" args="4">for</e>
+        </input>
+      </math>
+    </region>
+    <region left="270" top="450" width="254" height="81" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">length</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operand">i</e>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">X4</e>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">el</e>
+          <e type="operand">t</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">X4</e>
+          <e type="operand">i</e>
+          <e type="operand">2</e>
+          <e type="function" args="3">el</e>
+          <e type="operand">x4</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="function" args="4">for</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="540" width="763" height="208" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="753" height="200" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <propertiessource index="1" sourcetype="PropertyGrid" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0.0007824582" xmax="0.6919826" xtick="0.1" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.6309901" ymax="0.6600534" ytick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="Время, с" ylabel="Амплитуда" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="true" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="x3(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="x4(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">X3</e>
+          <e type="operand">X4</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="0" top="1071" width="254" height="81" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">length</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operand">i</e>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">XB2</e>
+          <e type="operand">i</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">el</e>
+          <e type="operand">t</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">XB2</e>
+          <e type="operand">i</e>
+          <e type="operand">2</e>
+          <e type="function" args="3">el</e>
+          <e type="operand">xb2</e>
+          <e type="operand">i</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="function" args="4">for</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="1161" width="759" height="208" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="749" height="200" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <propertiessource index="1" sourcetype="PropertyGrid" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0.002670227" xmax="0.5026702" xtick="2.5" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.7360002" ymax="0.8639998" ytick="1" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="Время, с" ylabel="Амплитуда" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="true" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="xb2(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">XB2</e>
+        </input>
+      </xyplot>
+    </region>
+  </regions>
+</worksheet>
