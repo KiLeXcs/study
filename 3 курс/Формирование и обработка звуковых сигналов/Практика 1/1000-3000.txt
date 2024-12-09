@@ -1,0 +1,3 @@
+FilterCurve:f0="1000" f1="1000" f2="3000" f3="3000" 
+FilterLength="8191" InterpolateLin="1" 
+v0="0" v1="-60" v2="-60" v3="0" 
