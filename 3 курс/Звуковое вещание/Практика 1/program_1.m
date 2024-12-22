@@ -1,22 +1,42 @@
-audio_file_path = 'C:\Users\Root\Desktop\Lame 3.98.4\6.wav';
+audio_file_path = 'C:\Users\Root\Desktop\2.wav';
 
-% 1) Чтение значений отсчетов сигнала и значения частоты дискретизации
 [y, fs] = audioread(audio_file_path);
 
-% 2) Ограничение длительности аудиосигнала до 5 секунд
-max_duration = 5; % максимальная длительность в секундах
-if length(y) / fs > max_duration
-    y = y(1:fs*max_duration); % обрезаем сигнал
-end
+t = (0:length(y)-1) / fs;
 
-% 3) Формирование переменной, содержащей значение частоты дискретизации
-% Здесь fs уже содержит частоту дискретизации, прочитанную из файла
+figure;
+plot(t, y);
+title('График 1: Зависимость амплитуды сигнала от времени');
+xlabel('Время (с)');
+ylabel('Амплитуда');
+grid on;
+axis([0 max(t) min(y) max(y)]);
 
-% 4) Воспроизведение сигнала с произвольным значением частоты дискретизации и разрядностью 16 бит/отсчет
-% Вы можете задать любое значение частоты дискретизации
-desired_fs = fs; % используем частоту дискретизации из файла
+duration_5s = 5;
+length(y) / fs > duration_5s
+ t_5s = t(t <= duration_5s);
+ y_5s = y(1:length(t_5s));
 
-printf('fs = %.0f Гц', fs);
+figure;
+plot(t_5s, y_5s);
+title('График 2: Зависимость амплитуды сигнала от времени (5 секунд)');
+xlabel('Время (с)');
+ylabel('Амплитуда');
+grid on;
+axis([0 duration_5s min(y_5s) max(y_5s)]);
 
-% Воспроизведение сигнала
-sound(y, desired_fs);
+
+duration_5ms = 0.005;
+length(y) / fs > duration_5ms
+num_samples_5ms = round(duration_5ms * fs);
+t_5ms = t(1:num_samples_5ms);
+y_5ms = y(1:num_samples_5ms);
+
+figure;
+stem(t_5ms, y_5ms, 'filled');
+title('График 3: Зависимость амплитуды сигнала от отсчетов (5 мс)');
+xlabel('Время (с)');
+ylabel('Амплитуда');
+grid on;
+axis([0 duration_5ms min(y_5ms) max(y_5ms)]);
+
