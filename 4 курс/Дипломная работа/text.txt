@@ -1,0 +1,4 @@
+mkfifo /tmp/ffmpeg_stream.h264
+
+ffmpeg -re -i video.mp4 -c:v copy -an -f h264 /tmp/ffmpeg_stream.h264 -y
+

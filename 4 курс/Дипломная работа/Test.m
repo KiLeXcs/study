@@ -1,3 +1,54 @@
+function receive = receive_raw_stream()
+    % ⚠️ Параметры кода должны быть заданы явно внутри функции или передаваться аргументами
+    n = 255; 
+    k = 239;
+    
+    PIPE_PATH = '/tmp/ffmpeg_stream.h264';
+    CHUNK_SIZE = 8192;
+
+    fprintf('⏳ Ожидание подключения FFmpeg к %s...\n', PIPE_PATH);
+    fid = fopen(PIPE_PATH, 'rb'); % ⚠️ 'rb' ОБЯЗАТЕЛЕН для бинарных данных!
+    if fid == -1
+        error('Не удалось открыть pipe. Убедитесь, что FFmpeg запущен.');
+    end
+    fprintf('✅ Поток открыт. Начинаю чтение.\n');
+
+    % 🔒 Гарантированное закрытие файла при любом выходе из функции (аналог finally)
+    cleanupObj = onCleanup(@() fclose(fid));
+    
+    receive = [];
+
+    try
+        while true
+            data = fread(fid, CHUNK_SIZE, 'uint8=>uint8');
+            if isempty(data)
+                fprintf('🛑 Поток завершён.\n');
+                break;
+            end
+
+            % 1. Байты -> Биты (MSB-first, совместимо со всеми версиями MATLAB)
+            numBytes = length(data);
+            bits = zeros(8 * numBytes, 1); % double-массив 0 и 1
+            for b = 1:8
+                bits(b:8:end) = bitget(data, 9 - b);
+            end
+
+            % 2. Кодирование
+            encoded = rsEncodeBits(bits, n, k);
+
+            % 3. Декодирование с автоматическим удалением padding
+            decoded = rsDecodeBits(encoded, n, k, length(bits));
+
+            fprintf('Чанк обработан: %d байт | Всего бит: %d\n', numBytes, length(receive));
+        end
+    catch ME
+        fprintf('⚠️ Ошибка обработки потока: %s\n', ME.message);
+    end
+    % cleanupObj автоматически выполнит fclose(fid) здесь
+end
+
+
+
 function decodedBits = rsDecodeBits(encodedBits, n, k, originalLen)
 % RSDECODEBITS Декодирование потока битов кодом Рида-Соломона (n, k)
 %   decodedBits = rsDecodeBits(encodedBits, n, k)
@@ -83,6 +134,8 @@ function decodedBits = rsDecodeBits(encodedBits, n, k, originalLen)
     end
 end
 
+
+
 function encodedBits = rsEncodeBits(bitStream, n, k)
 % RSENCODEBITS Кодирование потока битов кодом Рида-Соломона (n, k)
 %   encodedBits = rsEncodeBits(bitStream, n, k)
@@ -164,18 +217,5 @@ end
 
 
 
-
-
-% 1. Исходные данные
-data = randi([0 1], 100000, 1);
-n = 255; k = 239;
-
-% 2. Кодирование
-encoded = rsEncodeBits(data, n, k);
-
-% 4. Декодирование с удалением padding
-decoded = rsDecodeBits(encoded, n, k, length(data));
-
-% 5. Проверка
-isCorrect = isequal(data, decoded);
-fprintf('Данные восстановлены верно: %s\n', string(isCorrect));
+% 1. Получение потока данных
+data = receive_raw_stream()
