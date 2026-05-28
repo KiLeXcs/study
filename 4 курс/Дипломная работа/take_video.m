@@ -30,9 +30,6 @@ function receive_raw_stream()
             % send_to_next_stage(redundant_data);
             % =========================================================
 
-            % Для отладки: раскомментируйте строку ниже
-            fprintf('Получено %d байт | Первый байт: 0x%02X\n', length(data), data(1));
-            len = len + length(data);
         end
         disp(len);
     catch ME
